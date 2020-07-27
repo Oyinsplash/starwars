@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.hide{
+    display: none;
+}
+/* container to ensure equal left and right margin */
+.container {
+    width: 80%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 36em) {
+    .container {
+      max-width: 54rem;
+    }
+  }
+  @media (min-width: 48em) {
+    .container {
+      max-width: 72rem;
+    }
+  }
+  @media (min-width: 62em) {
+    .container {
+      max-width: 96rem;
+    }
+  }
+  @media (min-width: 75em) {
+    .container {
+      max-width: 114rem;
+    }
+  }
+  /* ***container ends**** */
+
+                /* landing page begins*/
+.landing_page{
+    background-image: url(https://cutewallpaper.org/21/star-wars-logo-wallpaper/Star-Wars-HD-Wallpaper-Phone-63+-images-.jpg);
+    background-color: #0B0B0B;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+                /* landing page ends*/
+
+                /* all characters begins*/
+.all-characters{
+    background-color: #171717;
+}
+.characters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.character{
+    width: 30%;
+    color: #fff;
+    display: flex;
+    border-radius: .5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.initial{
+    border: 1px solid #404040;
+    background-color: #5E5E5E;
+}
+.clicked{
+    border: 1px solid #5E5E5E;
+    color: #5E5E5E;
+    background-color: transparent;
+}
+.displayDiv{
+    width: 100%;
+    transition: all .4s;
+}
+.displayDiv img{
+    width: 100%;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.displayDiv p{
+    color: #FA164B;
+    font-size: 1.2rem;
+    width: 100%;
+}
+.displayDetails{
+    padding: 1rem .5rem;
+    flex-direction: column;
+    width: 100%;
+}
+.hide_btn{
+    color: #FA164B;
+    text-align: center;
+    border: 1px solid #FA164B;
+    border-radius: 50%;
+    margin-top: 1rem;
+    align-self: center;
+    font-size: .8rem;
+    padding: .5rem;
+    width: 4%;
+    transition: all .25s;
+}
+.hide_btn:hover{
+    cursor: pointer;
+    background-color: #FA164B;
+    color: #151515;
+}
+
+
+                /* all characters ends*/
