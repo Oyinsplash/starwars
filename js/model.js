@@ -92,11 +92,21 @@ fetch(url)
             displayName.classList.add("hide");
             imageContainer.style.overflow= "visible";
             dp.setAttribute(
-                "style", "height: 100%; margin: 1.5rem 0 1.5rem -4rem; border-bottom-left-radius: .5rem; border-bottom-right-radius: .5rem;")
+                "style", "height: 100%; margin: 1.5rem 0 1.5rem -6rem; border-bottom-left-radius: .5rem; border-bottom-right-radius: .5rem;")
             console.log("yea")
             displayDetails.classList.remove("hide");
         }
     });
+    close.addEventListener('click',(e)=>{
+        li.classList.remove("clicked");
+        li.className += " initial";  
+        displayDetails.classList.add("hide");
+        imageContainer.style.overflow= "hidden";
+        dp.setAttribute(
+            "style", "margin: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0;")   
+            displayName.classList.remove("hide");
+    })
+
     })
 })
 .catch((error)=> console.log(error));

@@ -44,6 +44,16 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.scroll{
+  display: block;
+  width: 10rem;
+}
+.scroll img{
+  width: 100%;
 }
                 /* landing page ends*/
 
@@ -106,6 +116,12 @@
     flex-direction: column;
     width: 50%;
     margin-left: -2rem;
+     /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center;  */
+}
+.detailsDiv p{
+  margin:1rem 0;
 }
 .hide_btn{
     color: #FA164B;
