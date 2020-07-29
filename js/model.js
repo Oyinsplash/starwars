@@ -53,7 +53,9 @@ fetch(url)
     dp.src= image[index];
     let imageContainer = document.createElement("div");
     imageContainer.classList.add("dp_container");
-    imageContainer.append(dp)
+    // imageContainer.append(dp)
+    // displayDiv.style.backgroundImage = "url(" + image[index] + ")";
+    imageContainer.setAttribute("style",`background-image: url(${image[index]}); background-size: cover;`)
     displayDiv.append(imageContainer);
 
     let displayName = document.createElement("p");
@@ -75,8 +77,6 @@ fetch(url)
     close.src ="../icons/cancel.svg";
     closeDiv.append(close);
     
-
-
     displayDetails.append(name);
     displayDetails.append(gender);
     displayDetails.append(height);
@@ -91,9 +91,9 @@ fetch(url)
             li.className += " clicked";
             displayName.classList.add("hide");
             imageContainer.style.overflow= "visible";
-            dp.setAttribute(
-                "style", "height: 100%; margin: 1.5rem 0 1.5rem -6rem; border-bottom-left-radius: .5rem; border-bottom-right-radius: .5rem;")
-            console.log("yea")
+            imageContainer.setAttribute(
+                "style", `background-image: url(${image[index]}); background-size: cover; height: 80%; margin: 1.5rem 0 1.5rem -6rem; border-radius: .5rem; transition: all .5s;`);
+            console.log("yea");
             displayDetails.classList.remove("hide");
         }
     });
@@ -102,10 +102,11 @@ fetch(url)
         li.className += " initial";  
         displayDetails.classList.add("hide");
         imageContainer.style.overflow= "hidden";
-        dp.setAttribute(
-            "style", "margin: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0;")   
-            displayName.classList.remove("hide");
+        imageContainer.setAttribute(
+            "style", `background-image: url(${image[index]}); background-size: cover; height: 85%; border-top-left-radius: .5rem; border-top-right-radius: .5rem; transition: all .5s;`);
+        displayName.classList.remove("hide");
     })
+    
 
     })
 })
